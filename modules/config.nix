@@ -1,6 +1,5 @@
-{ ... }:
-{
-    config = {
-        name = "Nimadir nimadir";
-    };
+{...}: {
+  config = {
+    name = "Nimadir nimadir";
+  };
 }

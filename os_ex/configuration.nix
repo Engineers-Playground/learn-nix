@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -12,7 +15,7 @@
   system.stateVersion = "25.05";
   users.users.maftun = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = ["wheel"];
     initialPassword = "test";
   };
   environment.systemPackages = with pkgs; [
@@ -20,4 +23,3 @@
     lolcat
   ];
 }
-

@@ -33,11 +33,13 @@
 #/* (x: x+1) 1 */
 #
 #/* a: a+5 */ /* nix repl->import ./hello.nix 5 */
-
-
-	
-/* ----- Packaging existing software with nix ------ */
-{stdenv, fetchzip}:
+/*
+----- Packaging existing software with nix ------
+*/
+{
+  stdenv,
+  fetchzip,
+}:
 stdenv.mkDerivation {
   name = "first derivation";
   version = "0.0.1";
